@@ -1,0 +1,10 @@
+loggedin: <%= @user.fname %>
+<br>
+
+<form method ="POST" action="/blog">
+  <label for ="textbox">Make a post</label>
+    <textarea rows="4" cols="50" id="textbox" name="[post]body"></textarea>
+    <input type='submit' />
+</form>
+
+<%# The posts: <%= @post.body %> 

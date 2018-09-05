@@ -9,6 +9,17 @@
     <script src="main.js"></script>
 </head>
 <body>
+     <div id='notice-container'>
+        <div class='notice'>
+            <%= flash[:notice] if flash[:notice] %>
+        </div>
+        <div class='error'>
+            <%= flash[:error] if flash[:error] %>
+        </div>
+        <div class='success'>
+            <%= flash[:success] if flash[:success] %>
+        </div>
     <%= yield %>
+
 </body>
 </html>
