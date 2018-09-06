@@ -65,8 +65,9 @@ end
 post '/blog' do 
 
     if params[:post][:body].length > 0
+        posted_at = Time.now
         user = current_user
-        Post.create(body: params[:post][:body], user_id: user.id)
+        Post.create(body: params[:post][:body],posted_at: posted_at, user_id: user.id)
         redirect '/feed'
     end
     
