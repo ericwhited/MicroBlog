@@ -4,6 +4,7 @@ require 'bundler/setup'
 require 'sinatra/flash'
 require './models/user.rb'
 require './models/post.rb'
+require './models/profile.rb'
 
 # set database: "sqlite3:testapp_signin.sqlite3"
 
@@ -97,6 +98,8 @@ post '/register' do
     end
 
     User.create(params[:user])
+    user = current_user
+    Profile.create(bio: params[:profile][:bio],profile: params[:profile][:location], user_id: user.id)
 
     redirect '/'
 
