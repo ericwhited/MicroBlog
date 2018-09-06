@@ -13,6 +13,8 @@ configure(:development){set :database, "sqlite3:testapp_signin.sqlite3"}
 
 
 get '/' do 
+
+
     if session[:user_id]
         redirect '/feed'
     else
