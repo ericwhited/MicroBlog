@@ -13,7 +13,13 @@ configure(:development){set :database, "sqlite3:testapp_signin.sqlite3"}
 
 
 get '/' do 
-    erb :home
+    # erb :home
+    if session[:user_id]
+        redirect '/feed'
+    else
+        erb :home
+    end
+
 end
 
 get '/register' do
