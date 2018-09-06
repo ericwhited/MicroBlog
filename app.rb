@@ -2,13 +2,15 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require 'bundler/setup'
 require 'sinatra/flash'
-
-set database: "sqlite3:testapp_signin.sqlite3"
 require './models/user.rb'
 require './models/post.rb'
 
-configure(:development){set :database, "sqlite3:testapp_signin.sqlite3"}
+# set database: "sqlite3:testapp_signin.sqlite3"
+
 enable :sessions
+
+configure(:development){set :database, "sqlite3:testapp_signin.sqlite3"}
+
 
 get '/' do 
     erb :home
@@ -30,8 +32,18 @@ get '/feed' do
 end
 
 get '/profile' do
-    erb :profile
+    if !session[:user_id]
+        redirect '/'
+    else @user =current_user
+        erb :profile
+    
+    end
+    
 
+end
+
+get '/posts' do
+    erb :posts
 end
 
 post '/sign-in' do
@@ -51,10 +63,13 @@ end
 
 
 post '/blog' do 
-    Post.create(params[:post])
-    # redirect '/blog'
 
-
+    if params[:post][:body].length > 0
+        user = current_user
+        Post.create(body: params[:post][:body], user_id: user.id)
+        redirect '/feed'
+    end
+    
 end
 
 post '/register' do
