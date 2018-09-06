@@ -1,3 +1,12 @@
-<h1>This is the posts page</h1>
-Posts by <%= @user.fname %>
-<%=@current_user.post.body%>
+
+
+
+<h1>This is all posts <h1>
+
+<% @current_user.posts.each do |post| %>
+
+<h1> <%= "#{post.user.fname}'s Post:" %></h1> 
+
+The posts: <p><%= "body: #{post.body} #{post.posted_at}" %></p> 
+
+<% end %>
