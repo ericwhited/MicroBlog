@@ -13,13 +13,13 @@ configure(:development){set :database, "sqlite3:testapp_signin.sqlite3"}
 
 
 get '/' do 
-    # erb :home
+
+
     if session[:user_id]
         redirect '/feed'
     else
-        erb :home
+    erb :home
     end
-
 end
 
 get '/register' do
@@ -53,6 +53,11 @@ get '/posts' do
     erb :posts
 end
 
+get '/all_posts' do
+    @post = Post.all.reverse
+    erb :all_posts
+end
+
 post '/sign-in' do
     user = User.where(email: params[:email]).first
 
@@ -67,9 +72,8 @@ post '/sign-in' do
     end
 end
 
-get '/signOut' do 
+get '/sign_out' do 
     session[:user_id] = nil
-    'signed out'
     redirect '/'
 end
 

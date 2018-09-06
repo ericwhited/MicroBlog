@@ -1,0 +1,5 @@
+<h1>This is all posts <h1>
+<% Post.all.reverse[0..9].each do |post| %>
+<h1> <%= "#{User.find(post.user_id).fname}'s Post:"%></h1> 
+The posts: <p><%= "body: #{post.body}" %></p> 
+<% end %>
