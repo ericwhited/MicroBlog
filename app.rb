@@ -43,6 +43,7 @@ get '/profile' do
 end
 
 get '/posts' do
+    @current_user = current_user
     erb :posts
 end
 
