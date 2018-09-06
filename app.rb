@@ -43,6 +43,10 @@ get '/profile' do
 end
 
 get '/posts' do
+    if !session[:user_id]
+        redirect '/'
+    else @user = current_user
+    end
     erb :posts
 end
 
