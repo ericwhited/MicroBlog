@@ -61,6 +61,11 @@ post '/sign-in' do
     end
 end
 
+get '/signOut' do 
+    session[:user_id] = nil
+    'signed out'
+    redirect '/'
+end
 
 
 post '/blog' do 
