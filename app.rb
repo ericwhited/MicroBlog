@@ -49,15 +49,16 @@ get '/profile' do
 
 end
 
-get '/posts' do
-    @current_user = current_user
-    erb :posts
-end
-
 get '/all_posts' do
     @post = Post.all.reverse
     erb :all_posts
 end
+
+get "/posts/:id" do
+    @post = Post.find(params[:id])
+    @body = @post.body
+    erb :"posts/view_post"
+   end
 
 get '/make_a_profile' do
     if !session[:user_id]
@@ -76,6 +77,16 @@ get '/edit_profile' do
         redirect '/'
     end
 end
+get "/posts/:id/edit" do
+  @post = Post.find(params[:id])
+  erb :"posts/edit_post"
+end
+
+put "/posts/:id" do
+    @post = Post.find(params[:id])
+    @post.update(params[:post])
+    redirect "/posts/#{@post.id}"
+  end
 
 post '/sign-in' do
     user = User.where(email: params[:email]).first
@@ -133,12 +144,25 @@ post '/edit_profile' do
     user.profile.update_attributes(bio: params[:profile][:bio],location: params[:profile][:location])
     redirect '/feed'
 end
+# edit a post
+post "/posts/:id" do
+    @post = Post.find(params[:id])
+    @post.update(params[:post])
+    redirect "/posts/#{@post.id}"
+  end
+  post "/posts/:id/delete" do
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect "/posts"
+  end
+
 post '/delete_account' do
     user = current_user
     Profile.where(user_id: user.id).destroy_all
     User.delete(user.id)
     "User delted"
 end
+
 def current_user
     if session[:user_id]
         User.find(session[:user_id])

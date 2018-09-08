@@ -6,7 +6,13 @@ loggedin: <%= @user.fname %>
     <textarea rows="4" cols="50" id="textbox" name="[post]body"></textarea>
     <input type='submit' />
 </form>
-<a href="/posts">See your posts </a>
 <br>
 <a href="/profile">See your profile</a>
 <a href="/delete_account">Delete your account</a>
+
+<h1> <%= "#{@user.fname}'s Post:" %></h1> 
+<% @user.posts.reverse.each do |post| %>
+
+<h4><a href="/posts/<%= post.id %>"> <%= "#{post.body}"  %></a></h4> 
+<p>created at: <%= post.posted_at %></p>
+<% end %>
