@@ -1,0 +1,9 @@
+<h1>edit profile loggedin: <%= @user.fname %> </h1>
+<form method="POST" action="/edit_profile">
+ <label for='bio'>Bio: </label>
+  <input type='text' name='[profile]bio' id='bio'/>
+  <br>
+  <label for='location'>location: </label>
+  <input type='text' name='[profile]location' id='location'/>
+  <input type='submit' />
+</form>

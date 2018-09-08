@@ -33,7 +33,7 @@ get '/feed' do
         @user = current_user
     erb :feed
     else 
-        redirect '/'
+        "no account"
     end
 
 end
@@ -59,6 +59,24 @@ get '/all_posts' do
     erb :all_posts
 end
 
+get '/make_a_profile' do
+    if !session[:user_id]
+        "no session"
+    else user = current_user
+    erb :make_a_profile
+    redirect '/feed'
+    end
+end
+
+get '/edit_profile' do
+    if session[:user_id]
+        @user = current_user
+        erb :edit_profile
+    else 
+        redirect '/'
+    end
+end
+
 post '/sign-in' do
     user = User.where(email: params[:email]).first
 
@@ -78,6 +96,10 @@ get '/sign_out' do
     redirect '/'
 end
 
+get '/delete_account' do
+    @user = current_user
+    erb :delete_account
+end
 
 post '/blog' do 
 
@@ -98,13 +120,25 @@ post '/register' do
     end
 
     User.create(params[:user])
-    user = current_user
-    Profile.create(bio: params[:profile][:bio],profile: params[:profile][:location], user_id: user.id)
+    user = User.where(fname: params[:user][:fname]).first
+    Profile.create(bio: params[:profile][:bio], location: params[:profile][:location], user_id: user.id)
 
     redirect '/'
 
 end
 
+# this allows you to submit and edit your profile!
+post '/edit_profile' do
+    user = current_user
+    user.profile.update_attributes(bio: params[:profile][:bio],location: params[:profile][:location])
+    redirect '/feed'
+end
+post '/delete_account' do
+    user = current_user
+    Profile.where(user_id: user.id).destroy_all
+    User.delete(user.id)
+    "User delted"
+end
 def current_user
     if session[:user_id]
         User.find(session[:user_id])
