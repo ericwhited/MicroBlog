@@ -1,12 +1,12 @@
 <h2>Edit Post</h2>
 <br/>
 <form action="/posts/<%= @post.id %>" method="POST">
- <div class="form-group">
+ <div>
   <label for="post_body">Body:</label>
   <br>
-  <textarea id="post_body" name="post[body]" class="form-control" rows="5"><%= @post.body %></textarea>
+  <textarea id="post_body" name="post[body]" rows="5"><%= @post.body %></textarea>
  </div>
-  <button type="submit" class="btn btn-success">Submit</button>
+  <button type="submit">Submit</button>
 </form>
 
 <form action="/posts/<%=@post.id %>/delete" method="Post">

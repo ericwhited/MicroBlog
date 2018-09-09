@@ -1,0 +1,9 @@
+<h1>edit profile loggedin: <%= @user.fname %> </h1>
+<form action="/edit_profile" method="POST">
+ <label for='bio'>Bio: </label>
+  <textarea type='text' name='[profile]bio' id='bio'><%= @user.profile.bio%></textarea>
+  <br>
+  <label for='location'>location: </label>
+  <textarea type='text' name='[profile]location' id='location'><%=@user.profile.location%></textarea>
+  <button>Submit changes</button>
+</form>

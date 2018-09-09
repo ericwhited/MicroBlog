@@ -27,9 +27,9 @@
             </li>
             
             <li>
-                <a href="/profile">Profile</a>
+                <a href="/profile/view_profile">Profile</a>
             </li>
-            
+                 <a href="/all_users">Users</a>
             <li>
                 <a href="/sign_out">Sign Out</a>
             </li>
@@ -48,9 +48,7 @@
         <div class='success'>
             <%= flash[:success] if flash[:success] %>
         </div>
-    <a href="/posts">See your posts </a>
 <br>
-<a href="/profile">See your profile</a>
     <%= yield %>
 
 </body>

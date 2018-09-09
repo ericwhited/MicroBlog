@@ -3,11 +3,11 @@ loggedin: <%= @user.fname %>
 
 <form method ="POST" action="/blog">
   <label for ="textbox">Make a post</label>
-    <textarea rows="4" cols="50" id="textbox" name="[post]body"></textarea>
+    <textarea rows="3" cols="30" id="textbox" name="[post]body"></textarea>
     <input type='submit' />
 </form>
 <br>
-<a href="/profile">See your profile</a>
+<a href="/profile/view_profile">See your profile</a>
 <a href="/delete_account">Delete your account</a>
 
 <h1> <%= "#{@user.fname}'s Post:" %></h1> 
