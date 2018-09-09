@@ -2,5 +2,5 @@
 
 
 <% @post.each do |post|%>
-<p><%= "#{post.body}, #{post.posted_at}" %></p>
+<p><%="#{post.user.fname} said: '#{post.body}', At: #{post.posted_at}" %></p>
 <% end %>

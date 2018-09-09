@@ -73,8 +73,9 @@ get '/profile/edit_profile' do
     end
 end
 
-#work in progress, she's the name of all users
+#work in progress, show's the name of all users
 get '/all_users' do
+    @user = User.all
     erb :all_users
 end
 
