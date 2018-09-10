@@ -59,7 +59,8 @@ nav {
 h1 {
   text-align: center; }
 
-body {
-  background-color: rgba(145, 239, 255, 0.308); }
+#wrap {
+  border: 3px solid rgba(128, 128, 128, 0.5);
+  padding: 40px; }
 
 /*# sourceMappingURL=main.css.map */
