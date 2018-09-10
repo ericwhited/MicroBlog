@@ -1,10 +1,9 @@
-<div id="wrap">
-    <h1>test</h1>
+<h1><%=@user.fname%>'s profile</h1>
 
-    <p>Name: <%= @user.fname %></p>
-    <p>Last Name: <%= @user.lname %></p>
-    <p>Email address: <%= @user.email %></p>
-    <p>Bio: <%= @user.profile.bio %></p>
-    <p>Location <%= @user.profile.location %></p>
+<p>Name: <%= @user.fname %></p>
+<p>Last Name: <%= @user.lname %></p>
+<p>Email address: <%= @user.email %></p>
+<p>Bio: <%= @user.profile.bio %></p>
+<p>Location <%= @user.profile.location %></p>
 
-</div>
+
