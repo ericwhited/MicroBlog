@@ -1,60 +1,54 @@
-/*
-Error: File to import not found or unreadable: home.
-       Load path: /home/eric/Desktop/testapp/public/stylesheets
-        on line 2 of stylesheets/main.scss
+nav {
+  margin: 0 auto; }
+  nav ul {
+    text-align: center; }
+    nav ul li {
+      display: inline-block;
+      font-size: 25px;
+      padding: 20px; }
 
-1: @import 'navBar';
-2: @import 'home';
-3: @import 'register';
-4: @import 'feed';
-5: @import 'viewProfile';
-6: @import 'all_users';
-7: @import 'all_posts';
+#sign_up_submit_btn {
+  margin-top: 30px; }
 
-Backtrace:
-stylesheets/main.scss:2
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-3.5.7/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-3.5.7/lib/sass/tree/import_node.rb:44:in `import'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-3.5.7/lib/sass/tree/import_node.rb:28:in `imported_file'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-3.5.7/lib/sass/tree/import_node.rb:37:in `css_import?'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:310:in `visit_import'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:36:in `visit'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-3.5.7/lib/sass/stack.rb:79:in `block in with_base'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-3.5.7/lib/sass/stack.rb:135:in `with_frame'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-3.5.7/lib/sass/stack.rb:79:in `with_base'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:52:in `map'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:36:in `visit'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:10:in `visit'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-3.5.7/lib/sass/tree/root_node.rb:36:in `css_tree'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-3.5.7/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-3.5.7/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-3.5.7/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-3.5.7/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-3.5.7/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-3.5.7/lib/sass/plugin/compiler.rb:209:in `each'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-3.5.7/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-3.5.7/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-3.5.7/lib/sass/plugin/compiler.rb:320:in `block in watch'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
-/home/eric/.rvm/gems/ruby-2.5.1/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: File to import not found or unreadable: home.\A        Load path: /home/eric/Desktop/testapp/public/stylesheets\A         on line 2 of stylesheets/main.scss\A \A 1: @import 'navBar';\A 2: @import 'home';\A 3: @import 'register';\A 4: @import 'feed';\A 5: @import 'viewProfile';\A 6: @import 'all_users';\A 7: @import 'all_posts';"; }
+#sign_up_form {
+  border: 3px solid rgba(128, 128, 128, 0.5);
+  padding: 30px;
+  text-align: center; }
+
+#post_submit_button {
+  display: block;
+  margin: 0 auto; }
+
+#profile_info_wrap {
+  border: 3px solid rgba(128, 128, 128, 0.5);
+  padding: 30px; }
+  #profile_info_wrap #profile_name {
+    text-align: center;
+    margin: 0 0 50px; }
+  #profile_info_wrap .profile_info {
+    font-size: 20px;
+    padding-left: 40px; }
+  #profile_info_wrap #profile_edit {
+    display: block;
+    text-align: center;
+    padding-top: 30px; }
+
+#all_users_main {
+  text-align: center; }
+  #all_users_main #all_users_wrap {
+    border: 3px solid rgba(128, 128, 128, 0.5);
+    padding: 40px; }
+
+#post_wrap {
+  border: 3px solid rgba(128, 128, 128, 0.5);
+  padding: 40px; }
+
+h1 {
+  text-align: center; }
+
+#wrap {
+  border: 3px solid rgba(128, 128, 128, 0.5);
+  padding: 40px;
+  text-align: center; }
+
+/*# sourceMappingURL=main.css.map */
