@@ -1,4 +1,5 @@
 <h1>All users page</h1>
 <% @user.each do |user|%>
-<p><%="Name: #{user.fname} #{user.lname}, location: #{user.profile.location}, email: #{user.email}" %></p>
+<p>Name: <a href='see_user/<%=user.id%>'> <%="#{user.fname}"%> </a> <%=" #{user.lname}, location: #{user.profile.location}, email: #{user.email}" %></p>
 <% end %>
+
