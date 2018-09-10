@@ -15,4 +15,10 @@ nav {
   #main_wrapper #login_form {
     padding: 40px; }
 
+#sign_up_submit {
+  margin-top: 30px; }
+
+#sign_up_form {
+  text-align: center; }
+
 /*# sourceMappingURL=main.css.map */
