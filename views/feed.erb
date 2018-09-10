@@ -1,18 +1,31 @@
-loggedin: <%= @user.fname %>
-<br>
+<main id="main_feed" class="row">
+  <!--Left div to center posting area-->
+  <div id="spacer" class="col-4"></div>
 
-<form method ="POST" action="/blog">
-  <label for ="textbox">Make a post</label>
-    <textarea rows="3" cols="30" id="textbox" name="[post]body"></textarea>
-    <input type='submit' />
-</form>
-<br>
-<a href="/profile/view_profile">See your profile</a>
-<a href="/delete_account">Delete your account</a>
+  <div id="main_feed_wrap" class="col-4">
+    <form method ="POST" action="/blog">
+      <h1 id="logged_in_message">logged in: <%= @user.fname %></h1>
+      
+      <label id="make_post_message" for ="textbox">Make a post</label>
+      <br>
+        <textarea rows="3" cols="30" id="textbox" name="[post]body"></textarea>
+        <input id="post_submit_button" class="btn btn-primary" type='submit' />
+    </form>
+    
+    <br>
+    
+    <a href="/profile/view_profile">See your profile</a>
+    <a href="/delete_account">Delete your account</a>
 
-<h1> <%= "#{@user.fname}'s Post:" %></h1> 
-<% @user.posts.reverse.each do |post| %>
+    <h1> <%= "#{@user.fname}'s Post:" %></h1> 
+    <% @user.posts.reverse.each do |post| %>
 
-<h4><a href="/posts/<%= post.id %>"> <%= "#{post.body}"  %></a></h4> 
-<p>created at: <%= post.posted_at %></p>
-<% end %>
+    <h4><a href="/posts/<%= post.id %>"> <%= "#{post.body}"  %></a></h4> 
+    <p>created at: <%= post.posted_at %></p>
+    <% end %>
+  </div>
+
+  <!--Right div to center posting area-->
+  <div id="spacer" class="col-4"></div>  
+
+</main>
