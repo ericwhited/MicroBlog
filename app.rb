@@ -15,11 +15,10 @@ configure(:development){set :database, "sqlite3:testapp_signin.sqlite3"}
 #route to the home page, if there is a signed in user go to the feed when home is clicked.
 #if no user logged in, send them to the home page to sign in or make an account.
 get '/' do 
-    if !session[:user_id]
+     if !session[:user_id]
         erb :home
     else
         redirect '/feed'
-    erb :home
     end
 end
 
