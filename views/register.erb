@@ -1,63 +1,59 @@
-<main id="register_area" class="row">  
+<form id="sign_up_form" method="POST" action="/register">
+  <h2>Sign Up</h2>
+  <h5>So you can be bitter too!</h5>
+
+
+  <label for='fname'>First Name </label>
+  <br/>
+  <input type='text' name='[user]fname' id='fname'/>
+  <br/>
+
+
+  <label for='lname'>Last Name </label>
+  <br/>
+  <input type='text' name='[user]lname' id='name'/>
+  <br/>
+
+
+  <label for='email'>Email </label>
+  <br/>
+  <input type='text' name='[user]email' id='email'/>
+
+
+  <br/>
+<%# 
+
+  <label for='bio'>Bio: </label>
+  <input type='text' name='[profile]bio' id='bio'/>
+  <br>
+  <label for='location'>location: </label>
+  <input type='text' name='[profile]location' id='location'/> %> 
   
-  <div id="spacer" class="col-4"></div>
-
-  <form id="sign_up_form" class="col-4" method="POST" action="/register">
-    <h2>Sign Up</h2>
-    <h5>So you can be bitter too!</h5>
 
 
-    <label for='fname'>First Name </label>
-    <br/>
-    <input type='text' name='[user]fname' id='fname'/>
-    <br/>
+  <label for='password'>Password</label>
+  <br/>
+  <input type='password' name='[user]password' id='password'/>
+  <br/>
+
+  
+  <label for='confirm_password'>Confirm Password </label>
+  <br/>
+  <input type='password' name='confirm_password' id='confirm_password'/>
+  <br />
 
 
-    <label for='lname'>Last Name </label>
-    <br/>
-    <input type='text' name='[user]lname' id='name'/>
-    <br/>
+  <label for='bio'>Bio: </label>
+  <br/>
+  <input type='text' name='[profile]bio' id='bio'/>
+  <br>
+  <label for='location'>Location: </label>
+  <br/>
+  <input type='text' name='[profile]location' id='location'/>
+  <br>
+  <button id="sign_up_submit_btn" class="btn btn-primary">Submit</button>
+</form>
 
 
-    <label for='email'>Email </label>
-    <br/>
-    <input type='text' name='[user]email' id='email'/>
-
-
-    <br/>
-  <%# 
-
-    <label for='bio'>Bio: </label>
-    <input type='text' name='[profile]bio' id='bio'/>
-    <br>
-    <label for='location'>location: </label>
-    <input type='text' name='[profile]location' id='location'/> %> 
-    
-
-
-    <label for='password'>Password</label>
-    <br/>
-    <input type='password' name='[user]password' id='password'/>
-    <br/>
-
-    
-    <label for='confirm_password'>Confirm Password </label>
-    <br/>
-    <input type='password' name='confirm_password' id='confirm_password'/>
-    <br />
-
-
-    <label for='bio'>Bio: </label>
-    <br/>
-    <input type='text' name='[profile]bio' id='bio'/>
-    <br>
-    <label for='location'>Location: </label>
-    <br/>
-    <input type='text' name='[profile]location' id='location'/>
-    <br>
-    <button id="sign_up_submit_btn" class="btn btn-primary">Submit</button>
-  </form>
-
-  <div id="spacer" class="col-4"></div>
 
 </main>

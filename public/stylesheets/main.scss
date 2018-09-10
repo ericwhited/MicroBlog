@@ -1,6 +1,6 @@
 @import 'navBar';
-@import 'home';
-@import 'register';
+// @import 'home';
+// @import 'register';
 @import 'feed';
 @import 'viewProfile';
 @import 'all_users';
@@ -14,4 +14,5 @@ h1 {
 #wrap {
     border: 3px solid rgba(128, 128, 128, 0.5);
     padding: 40px;
+    text-align: center;
 }

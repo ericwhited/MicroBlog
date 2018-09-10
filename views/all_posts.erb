@@ -1,15 +1,4 @@
-<main id="all_posts_main" class="row">
-    
-    <div id="spacer" class="col-4"></div>
-
-    <div id="post_wrap" class="col-4">
-        <h1>All posts </h1>
-
-
-        <% @post.each do |post|%>
+<h1>All posts </h1>
+<% @post.each do |post|%>
 <p><a href='see_user/<%=post.user.id%>'><%="#{post.user.fname}"%> </a>said:<%="#{post.body}, At: #{post.posted_at}"%></p>        <% end %>
-    </div>
 
-    <div id="spacer" class="col-4"></div>
-
-</main>

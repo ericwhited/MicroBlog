@@ -7,27 +7,6 @@ nav {
       font-size: 25px;
       padding: 20px; }
 
-#main_wrapper {
-  border: 3px solid rgba(128, 128, 128, 0.5);
-  margin: 55px 0;
-  padding: 60px;
-  text-align: center; }
-  #main_wrapper #login_form {
-    padding: 40px; }
-
-#sign_up_submit_btn {
-  margin-top: 30px; }
-
-#sign_up_form {
-  border: 3px solid rgba(128, 128, 128, 0.5);
-  padding: 30px;
-  text-align: center; }
-
-#main_feed_wrap {
-  text-align: center;
-  border: 3px solid rgba(128, 128, 128, 0.5);
-  padding: 40px; }
-
 #post_submit_button {
   display: block;
   margin: 0 auto; }
@@ -61,6 +40,7 @@ h1 {
 
 #wrap {
   border: 3px solid rgba(128, 128, 128, 0.5);
-  padding: 40px; }
+  padding: 40px;
+  text-align: center; }
 
 /*# sourceMappingURL=main.css.map */
