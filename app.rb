@@ -84,6 +84,11 @@ get "/posts/:id/edit" do
   @post = Post.find(params[:id])
   erb :"posts/edit_post"
 end
+
+get "/see_user/:id" do
+    @user =User.find(params[:id])
+    erb :see_user
+end
 #when you click submit, it updates that post and then redirects the user to see the updated post.
 put "/posts/:id" do
     @post = Post.find(params[:id])

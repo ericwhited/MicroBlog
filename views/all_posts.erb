@@ -2,5 +2,7 @@
 
 
 <% @post.each do |post|%>
-<p><%="#{post.user.fname} said: '#{post.body}', At: #{post.posted_at}" %></p>
+<p><a href='see_user/<%=post.user.id%>'><%="#{post.user.fname}"%></a>said:<%="#{post.body}, At: #{post.posted_at}"%></p>
 <% end %>
+
+<%# <a href="/posts/<%= @post.id %> 
