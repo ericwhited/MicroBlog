@@ -1,9 +1,27 @@
-<h1>This is a profile page<h1>
-<%= @user.fname %>
-<br>
- <%=@user.lname%>
- <%=@user.email%>
- Profile: <%=@user.profile.bio%>
- <br>
- Location: <%=@user.profile.location%>
-<a href="/profile/edit_profile">Edit Profile</a>
+<main id="view_profile_wrap" class="row">
+
+    <div id="spacer" class="col-4"></div>
+
+    <div id="profile_info_wrap" class="col-4">
+        <h1 id="profile_name"> <%= @user.fname %>'s profile </h1>
+
+       <span id="profile_fullName" class="profile_info"> Name: <%=@user.fname%> <%=@user.lname%> </span>
+        <br>
+
+        <span id="profile_email" class="profile_info">Email: <%=@user.email%> </span>
+        <br>
+
+        <span id="profile_bio" class="profile_info"> Bio: <%=@user.profile.bio%>
+        <br>
+
+        <span id="profile_location" class="profile_info"> Location: <%=@user.profile.location%> </span>
+        <br>
+
+        <a id="profile_edit" class="profile_info" href="/profile/edit_profile">Edit Profile</a>
+    </div>
+
+    <div id="spacer" class="col-4"></div>
+
+
+
+</main>
