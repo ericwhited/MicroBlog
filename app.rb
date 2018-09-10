@@ -7,8 +7,6 @@ require './models/user.rb'
 require './models/post.rb'
 require './models/profile.rb'
 
-# set database: "sqlite3:testapp_signin.sqlite3"
-
 enable :sessions
 
 configure(:development){set :database, "sqlite3:testapp_signin.sqlite3"}
@@ -16,11 +14,10 @@ configure(:development){set :database, "sqlite3:testapp_signin.sqlite3"}
 #route to the home page, if there is a signed in user go to the feed when home is clicked.
 #if no user logged in, send them to the home page to sign in or make an account.
 get '/' do 
-    if !session[:user_id]
+     if !session[:user_id]
         erb :home
     else
         redirect '/feed'
-    erb :home
     end
 end
 
@@ -84,6 +81,11 @@ end
 get "/posts/:id/edit" do
   @post = Post.find(params[:id])
   erb :"posts/edit_post"
+end
+
+get "/see_user/:id" do
+    @user =User.find(params[:id])
+    erb :see_user
 end
 #when you click submit, it updates that post and then redirects the user to see the updated post.
 put "/posts/:id" do
