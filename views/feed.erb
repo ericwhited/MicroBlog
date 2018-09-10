@@ -1,8 +1,4 @@
-<main id="main_feed" class="row">
-  <!--Left div to center posting area-->
-  <div id="spacer" class="col-4"></div>
 
-  <div id="main_feed_wrap" class="col-4">
     <form method ="POST" action="/blog">
       <h1 id="logged_in_message">logged in: <%= @user.fname %></h1>
       
@@ -25,8 +21,5 @@
     <p>created at: <%= post.posted_at %></p>
     <% end %>
   </div>
-
-  <!--Right div to center posting area-->
-  <div id="spacer" class="col-4"></div>  
 
 </main>

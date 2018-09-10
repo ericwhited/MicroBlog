@@ -57,7 +57,16 @@
             <%= flash[:success] if flash[:success] %>
         </div>
 <br>
-    <%= yield %>
+
+
+<main class="row">
+    <div id="spacer" class="col-4"></div>
+    
+    <div id="wrap" class="col-4"> <%= yield %> </div>
+    
+    <div id="spacer" class="col-4"></div>
+
+</main>
 
 </body>
 </html>
