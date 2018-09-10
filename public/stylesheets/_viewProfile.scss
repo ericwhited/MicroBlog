@@ -1,9 +1,20 @@
 #profile_info_wrap {
-    border: 3px solid black;
+    border: 3px solid rgba(128, 128, 128, 0.5);
     padding: 30px;
 
     #profile_name {
         text-align: center;
         margin: 0 0 50px;
+    }
+
+    .profile_info {
+        font-size: 20px;
+        padding-left: 40px;
+    }
+
+    #profile_edit {
+        display: block;
+        text-align: center;
+        padding-top: 30px;
     }
 }
