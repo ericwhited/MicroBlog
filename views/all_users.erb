@@ -1,4 +1,15 @@
-<h1>All users page</h1>
-<% @user.each do |user|%>
-<p><%="Name: #{user.fname} #{user.lname}, location: #{user.profile.location}, email: #{user.email}" %></p>
-<% end %>
+<main id="all_users_main" class="row">
+
+    <div id="spacer" class="col-4"></div>
+
+    <div id="all_users_wrap" class="col-4">
+        <h1 id="all_users_heading">All users page</h1>
+
+        <% @user.each do |user|%>
+            <p><%="Name: #{user.fname} #{user.lname}, location: #{user.profile.location}, email: #{user.email}" %></p>
+        <% end %>
+    </div>
+
+    <div id="spacer" class="col-4"></div>
+
+</main>

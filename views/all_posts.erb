@@ -1,6 +1,16 @@
-<h1>All posts </h1>
+<main id="all_posts_main" class="row">
+    
+    <div id="spacer" class="col-4"></div>
+
+    <div id="post_wrap" class="col-4">
+        <h1>All posts </h1>
 
 
-<% @post.each do |post|%>
-<p><%="#{post.user.fname} said: '#{post.body}', At: #{post.posted_at}" %></p>
-<% end %>
+        <% @post.each do |post|%>
+        <p><%="#{post.user.fname} said: '#{post.body}', At: #{post.posted_at}" %></p>
+        <% end %>
+    </div>
+
+    <div id="spacer" class="col-4"></div>
+
+</main>
