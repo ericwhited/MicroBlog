@@ -7,8 +7,6 @@ require './models/user.rb'
 require './models/post.rb'
 require './models/profile.rb'
 
-# set database: "sqlite3:testapp_signin.sqlite3"
-
 enable :sessions
 
 configure(:development){set :database, "sqlite3:testapp_signin.sqlite3"}
